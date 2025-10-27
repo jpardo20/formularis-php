@@ -34,48 +34,35 @@
 
 ---
 
-## 4) Agenda (120 minuts)
-**0:00–0:10** — Context i objectius + repàs molt breu HTTP i formularis  
-**0:10–0:25** — GET: paràmetres a l’URL i lectura amb `$_GET`  
-**0:25–0:50** — POST + validació al servidor (nom, email, missatge)  
-**0:50–1:10** — Pujada de fitxers: `enctype`, límits de mida i tipus  
-**1:10–1:25** — CSRF + sessions i `htmlspecialchars` (evitar XSS)  
-**1:25–1:50** — Pràctica guiada per parelles (mini-reptes)  
-**1:50–2:00** — Wrap‑up + *exit ticket* i deures opcionals
-
-> **Notes didàctiques**: alterna explicació curta + demostració en viu + comprovació ràpida (preguntes de 30s). Mantén el ritme amb temporitzador visible.
-
----
-
 ## 5) Guió pas a pas (amb notes per al docent)
 
-### Bloc 1 — Context (0:00–0:10)
+### Bloc 1 — Context
 - **Explica**: HTTP, formularis, ruta (*endpoint*), mètode (**GET/POST**), cos i capçaleres.
 - **Mostra** la pàgina d’exemple (index) i on veure `$_GET`, `$_POST` i `$_FILES` al panell *Debug*.
 
-### Bloc 2 — GET (0:10–0:25)
+### Bloc 2 — GET 
 - **Demostra** la cerca (formulari GET). Escriu una paraula i destaca com apareix `?q=...` a l’URL.
 - **Fes notar**: GET és idoni per cerques, filtres i enllaços compartibles. No apte per dades sensibles.
 - **Mini-pregunta**: On es troben les dades d’un GET al servidor? (Resposta: `$_GET`).
 
-### Bloc 3 — POST + validació (0:25–0:50)
+### Bloc 3 — POST + validació
 - **Omple** el formulari de contacte amb dades incorrectes: mostra missatges d’error.
 - **Explica** validació al servidor: *mai* confiar només en el client.
 - **Fes un “happy path”** i mostra el missatge d’èxit.
 - **Subratlla** l’ús d’`htmlspecialchars` al pintar dades d’usuari.
 
-### Bloc 4 — Upload (0:50–1:10)
+### Bloc 4 — Upload 
 - **Demostra** la pujada d’un PDF i d’una imatge (correcte) i després un tipus no permès.
 - **Explica**: `enctype="multipart/form-data"`, limit de **2 MB**, comprovació d’**extensió** i **MIME**.
 - **Mostra** la carpeta `src/uploads` i el nom segur generat.
 
-### Bloc 5 — CSRF + XSS (1:10–1:25)
+### Bloc 5 — CSRF + XSS 
 - **Explica**: sessió, token CSRF a un `input hidden`, i validació amb `hash_equals`.
 - **Prova** a enviar un POST sense token (forçant) i mostra l’error CSRF.
 - **XSS**: ensenya com `htmlspecialchars` evita injectar HTML/JS quan es mostren dades.
 
-### Bloc 6 — Pràctica guiada (1:25–1:50)
-Treball per parelles (10–15 min) + repàs ràpid (10 min):
+### Bloc 6 — Pràctica guiada 
+Treball per parelles  + repàs ràpid:
 1. **GET**: afegeix un segon paràmetre (ex.: `cat=php`) i mostra’l sota la caixa de cerca.
 2. **POST**: afegeix camp “**assumpte**” amb validació (mínim 3 caràcters).
 3. **UPLOAD**: puja només **PNG** i **PDF** (retira JPG/JPEG) i limita a **1 MB**.
@@ -84,14 +71,14 @@ Treball per parelles (10–15 min) + repàs ràpid (10 min):
 
 > **Solucions/Expectatives**: a l’annex tens fragments de codi orientatius dins `index.php`.
 
-### Bloc 7 — Wrap‑up (1:50–2:00)
+<!-- ### Bloc 7 — Wrap‑up
 - **Exit ticket (1–2 min)**: respon en un *post-it* o al xat del LMS:
   - Quan faig servir GET vs POST?
   - On es defineix l’`enctype` per a pujar fitxers?
   - Per què necessito un token CSRF?
 - **Deures opcionals**: escriu un formulari de registre amb camps addicionals i pujada d’avatar (PNG ≤ 1 MB), i mostra tots els errors sota els camps.
 
----
+--- -->
 
 ## 6) Avaluació formativa (checklist ràpid)
 - [ ] Diferencia correctament GET i POST i sap on llegir `$_GET`/`$_POST`.
