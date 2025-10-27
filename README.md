@@ -366,6 +366,3 @@ mkdir -p src/uploads && chmod 777 src/uploads
 - `move_uploaded_file($tmp, $dest)` → mou l’upload a destí
 - `finfo(FILEINFO_MIME_TYPE)` → obté el MIME real d’un fitxer
 
----
-
-**Llicència i ús**: pots reutilitzar aquest material lliurement a classe.
