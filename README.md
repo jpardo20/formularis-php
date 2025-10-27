@@ -1,4 +1,4 @@
-# Sessió: Formularis en PHP amb Docker (2 hores)
+# Sessió: Formularis en PHP amb Docker
 
 > **Objectiu general**: entendre i practicar l’enviament de dades amb **GET**, **POST**, **pujada de fitxers**, **validació al servidor**, **escapat de sortides** i **protecció CSRF** en PHP, utilitzant un entorn Docker llest per a classe.
 
