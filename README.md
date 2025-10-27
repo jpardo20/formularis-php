@@ -29,7 +29,7 @@
    ```bash
    docker compose up --build
    ```
-3. Comprova que s’obre `http://localhost:8080` i que la pàgina mostra els tres formularis.
+3. Comprova que s’obre `http://localhost:8484` i que la pàgina mostra els tres formularis.
 4. (Opcional) Prepara algun fitxer de prova (PDF i imatges) per a la pujada.
 
 ---
@@ -91,7 +91,7 @@ Treball per parelles  + repàs ràpid:
 ---
 
 ## 7) Troubleshooting (freqüents)
-- **No veig la pàgina a `localhost:8080`** → comprova que el contenidor està “healthy” i que el port no està ocupat; reinicia amb `docker compose down && docker compose up --build`.
+- **No veig la pàgina a `localhost:8484`** → comprova que el contenidor està “healthy” i que el port no està ocupat; reinicia amb `docker compose down && docker compose up --build`.
 - **Error de permisos en `uploads`** → crea la carpeta i dona permisos en entorns estrictes:
   ```bash
   mkdir -p src/uploads && chmod 777 src/uploads
@@ -119,7 +119,7 @@ services:
   web:
     build: .
     ports:
-      - "8080:80"
+      - "8484:80"
     volumes:
       - ./src:/var/www/html
     restart: unless-stopped
