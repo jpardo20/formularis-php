@@ -23,7 +23,7 @@
 
 ---
 
-## 3) Preparació prèvia (docent)
+## 3) Preparació prèvia
 1. Copia la carpeta **php-forms-docker** al teu equip (estructura a l’Annex A).
 2. Obre un terminal a la carpeta del projecte i arrenca:
    ```bash
@@ -34,7 +34,7 @@
 
 ---
 
-## 5) Guió pas a pas (amb notes per al docent)
+## 5) Guió pas a pas 
 
 ### Bloc 1 — Context
 - **Explica**: HTTP, formularis, ruta (*endpoint*), mètode (**GET/POST**), cos i capçaleres.
